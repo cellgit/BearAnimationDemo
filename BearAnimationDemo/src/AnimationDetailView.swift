@@ -17,7 +17,7 @@ struct AnimationDetailView: View {
     
     
     
-    @State private var isBouncing = false
+    @State private var isAnimating = false
     
     
     @State private var showText = false
@@ -31,18 +31,45 @@ struct AnimationDetailView: View {
             VStack {
                 Text("弹跳动画")
                     .font(.largeTitle)
-                    .bounce(isAnimating: $isBouncing)
+                    .bounce(isAnimating: $isAnimating)
                 
                 Button("切换动画") {
-                    isBouncing.toggle()
+                    isAnimating.toggle()
                 }
             }
         case .bouncingBall:
-            BouncingBall()
+//            BouncingBall(isBouncing: $isAnimating)
+            VStack {
+                Text("弹跳动画")
+                    .font(.largeTitle)
+                    .bounce(isAnimating: $isAnimating)
+                
+                Button("切换动画") {
+                    isAnimating.toggle()
+                }
+            }
         case .pulsingCircle:
-            PulsingCircle()
+            VStack {
+                pulsing(isAnimating: $isAnimating)
+                
+                Button("切换动画") {
+                    isAnimating.toggle()
+                }
+            }
         case .rotatingIcon:
-            RotatingIcon()
+            VStack {
+                Text("错误输入")
+                    .font(.largeTitle)
+                    .foregroundColor(.red)
+                    .shake(times: shakeCount)
+                
+                Button("触发抖动") {
+                    withAnimation(.default) {
+                        shakeCount += 1
+                    }
+                }
+            }
+            
         case .shakeEffect:
             VStack {
                 Text("错误输入")
