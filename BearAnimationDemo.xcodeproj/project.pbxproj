@@ -12,6 +12,10 @@
 		84D46B072D27D74400623477 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D46B012D27D74400623477 /* Assets.xcassets */; };
 		84D46B082D27D74400623477 /* BearAnimationDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D46B032D27D74400623477 /* BearAnimationDemoApp.swift */; };
 		84D46B092D27D74400623477 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D46B042D27D74400623477 /* ContentView.swift */; };
+		84D46B122D27D8D000623477 /* AnimationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D46B112D27D8D000623477 /* AnimationListView.swift */; };
+		84D46B142D27D8F500623477 /* AnimationEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D46B132D27D8F500623477 /* AnimationEnum.swift */; };
+		84D46B182D27D9EA00623477 /* AnimationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D46B172D27D9EA00623477 /* AnimationDetailView.swift */; };
+		84D46B1B2D27E31900623477 /* BearAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 84D46B1A2D27E31900623477 /* BearAnimation */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,9 @@
 		84D46B022D27D74400623477 /* BearAnimationDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BearAnimationDemo.entitlements; sourceTree = "<group>"; };
 		84D46B032D27D74400623477 /* BearAnimationDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearAnimationDemoApp.swift; sourceTree = "<group>"; };
 		84D46B042D27D74400623477 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		84D46B112D27D8D000623477 /* AnimationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationListView.swift; sourceTree = "<group>"; };
+		84D46B132D27D8F500623477 /* AnimationEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationEnum.swift; sourceTree = "<group>"; };
+		84D46B172D27D9EA00623477 /* AnimationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -61,6 +68,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D46AFE2D27D6CC00623477 /* BearAnimation in Frameworks */,
+				84D46B1B2D27E31900623477 /* BearAnimation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,8 +125,19 @@
 				84D46B022D27D74400623477 /* BearAnimationDemo.entitlements */,
 				84D46B032D27D74400623477 /* BearAnimationDemoApp.swift */,
 				84D46B042D27D74400623477 /* ContentView.swift */,
+				84D46B102D27D8BF00623477 /* src */,
 			);
 			path = BearAnimationDemo;
+			sourceTree = "<group>";
+		};
+		84D46B102D27D8BF00623477 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				84D46B132D27D8F500623477 /* AnimationEnum.swift */,
+				84D46B112D27D8D000623477 /* AnimationListView.swift */,
+				84D46B172D27D9EA00623477 /* AnimationDetailView.swift */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +158,7 @@
 			name = BearAnimationDemo;
 			packageProductDependencies = (
 				84D46AFD2D27D6CC00623477 /* BearAnimation */,
+				84D46B1A2D27E31900623477 /* BearAnimation */,
 			);
 			productName = BearAnimationDemo;
 			productReference = 84D46AC82D27CF8100623477 /* BearAnimationDemo.app */;
@@ -223,7 +243,7 @@
 			mainGroup = 84D46ABF2D27CF8100623477;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				84D46AFC2D27D6CC00623477 /* XCLocalSwiftPackageReference "../BearAnimation" */,
+				84D46B192D27E31900623477 /* XCLocalSwiftPackageReference "../BearAnimation" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 84D46AC92D27CF8100623477 /* Products */;
@@ -270,6 +290,9 @@
 			files = (
 				84D46B082D27D74400623477 /* BearAnimationDemoApp.swift in Sources */,
 				84D46B092D27D74400623477 /* ContentView.swift in Sources */,
+				84D46B182D27D9EA00623477 /* AnimationDetailView.swift in Sources */,
+				84D46B122D27D8D000623477 /* AnimationListView.swift in Sources */,
+				84D46B142D27D8F500623477 /* AnimationEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,7 +650,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		84D46AFC2D27D6CC00623477 /* XCLocalSwiftPackageReference "../BearAnimation" */ = {
+		84D46B192D27E31900623477 /* XCLocalSwiftPackageReference "../BearAnimation" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../BearAnimation;
 		};
@@ -635,6 +658,10 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		84D46AFD2D27D6CC00623477 /* BearAnimation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BearAnimation;
+		};
+		84D46B1A2D27E31900623477 /* BearAnimation */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BearAnimation;
 		};

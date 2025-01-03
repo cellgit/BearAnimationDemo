@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var selectedAnimation: AnimationEnum = .bounceEffect
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationSplitView(columnVisibility: .constant(.automatic)) {
+            AnimationListView(selectedAnimation: $selectedAnimation)
+        } detail: {
+            AnimationDetailView(animation: selectedAnimation)
         }
-        .padding()
+        .navigationTitle("Bear Animation")
+        
+        
+//        NavigationStack {
+//            AnimationListView(selectedAnimation: $selectedAnimation)
+//        }
+//        .navigationTitle("Bear Animation")
+        
     }
 }
 
